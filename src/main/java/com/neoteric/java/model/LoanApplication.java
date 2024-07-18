@@ -4,4 +4,5 @@ public class LoanApplication {
     public Occupation occupation;
     public Address address;
     public Customer customerDetails;
+
 }

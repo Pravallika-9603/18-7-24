@@ -1,12 +1,13 @@
 package com.neoteric.java.Service;
 
 import com.neoteric.java.model.LoanApplication;
+import com.neoteric.java.model.LoanReturns;
 
 public class LoanApproval {
-    public int loanAmountApproval(LoanApplication loanApplication){
-        System.out.println(loanApplication.occupation.sal);
-        System.out.println(loanApplication.occupation.expenditure);
-        int amount=loanApplication.occupation.sal-loanApplication.occupation.expenditure;
-        return amount*10;
+    public LoanReturns loanAmountApproval(LoanApplication loanApplication){
+        LoanReturns loanReturns=new LoanReturns();
+        loanReturns.savings=loanApplication.occupation.sal-loanApplication.occupation.expenditure;
+         loanReturns.loanamount=loanReturns.savings*10;
+        return loanReturns;
     }
 }
