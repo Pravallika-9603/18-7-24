@@ -7,6 +7,7 @@ import java.util.UUID;
 
 public class LoanApplicationService {
     public String loanProcessing(LoanApplication loanApplication){
-        return UUID.randomUUID().toString();
+        loanApplication.loanNo=UUID.randomUUID().toString();
+        return loanApplication.loanNo;
     }
 }

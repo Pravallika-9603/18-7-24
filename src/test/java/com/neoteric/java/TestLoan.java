@@ -37,9 +37,9 @@ public class TestLoan {
        LoanApproval loanApproval=new LoanApproval();
        int loanAmount=loanApproval.loanAmountApproval(loanApplication);
         Assertions.assertNotNull(loanAmount);
-        System.out.println(loanAmount);
+       // System.out.println(loanAmount);
         EligiblityCheck eligiblityCheck=new EligiblityCheck(loanApproval);
-       String loannum=eligiblityCheck.loanEligiblity(24);
+       String loannum=eligiblityCheck.loanEligiblity(12);
         Assertions.assertNotNull(loannum);
     }
 }

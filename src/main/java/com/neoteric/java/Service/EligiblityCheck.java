@@ -10,7 +10,7 @@ public class EligiblityCheck {
         this.loanApproval=loanApproval;
     }
   public String loanEligiblity(int months){
-      System.out.println(loanApproval.loanAmount);
+      //System.out.println(loanApproval.loanAmount);
      double partOfSaving=0.6*loanApproval.amount;
        double amountPerMon=loanApproval.loanAmount/months;
         if(partOfSaving>=amountPerMon){
