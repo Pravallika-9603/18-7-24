@@ -35,9 +35,9 @@ public class TestLoan {
         String loanAppNo=loanApplicationService.loanProcessing(loanApplication);
         Assertions.assertNotNull(loanAppNo);
        LoanApproval loanApproval=new LoanApproval();
-       LoanReturns loanAmount=loanApproval.loanAmountApproval(loanApplication);
-        Assertions.assertNotNull(loanAmount.loanamount);
-        System.out.println(loanAmount.loanamount);
+       int loanAmount=loanApproval.loanAmountApproval(loanApplication);
+        Assertions.assertNotNull(loanAmount);
+        System.out.println(loanAmount);
         EligiblityCheck eligiblityCheck=new EligiblityCheck();
        String loannum=eligiblityCheck.loanEligiblity(12);
         Assertions.assertNotNull(loannum);
