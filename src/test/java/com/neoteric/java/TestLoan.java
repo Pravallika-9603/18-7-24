@@ -38,8 +38,8 @@ public class TestLoan {
        int loanAmount=loanApproval.loanAmountApproval(loanApplication);
         Assertions.assertNotNull(loanAmount);
         System.out.println(loanAmount);
-        EligiblityCheck eligiblityCheck=new EligiblityCheck();
-       String loannum=eligiblityCheck.loanEligiblity(12);
+        EligiblityCheck eligiblityCheck=new EligiblityCheck(loanApproval);
+       String loannum=eligiblityCheck.loanEligiblity(24);
         Assertions.assertNotNull(loannum);
     }
 }
