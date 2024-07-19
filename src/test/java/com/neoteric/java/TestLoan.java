@@ -1,9 +1,12 @@
 package com.neoteric.java;
 
-import com.neoteric.java.Service.EligiblityCheck;
-import com.neoteric.java.Service.LoanApproval;
-import com.neoteric.java.Service.LoanApplicationService;
-import com.neoteric.java.model.*;
+import com.neoteric.java.loan.model.service.EligiblityCheck;
+import com.neoteric.java.loan.model.service.LoanApproval;
+import com.neoteric.java.loan.model.service.LoanApplicationService;
+import com.neoteric.java.loan.model.Address;
+import com.neoteric.java.loan.model.Customer;
+import com.neoteric.java.loan.model.LoanApplication;
+import com.neoteric.java.loan.model.Occupation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +14,7 @@ public class TestLoan {
     @Test
     public void loan(){
         Customer customer=new Customer();
-        customer.name="Ashri";
+        customer.name="Churi";
         customer.phnno="9553048885";
         customer.email="pravali9603@gmail.com";
         Address address=new Address();
@@ -37,9 +40,9 @@ public class TestLoan {
        LoanApproval loanApproval=new LoanApproval();
        int loanAmount=loanApproval.loanAmountApproval(loanApplication);
         Assertions.assertNotNull(loanAmount);
-       // System.out.println(loanAmount);
+        Assertions.assertEquals(500000,loanAmount);
         EligiblityCheck eligiblityCheck=new EligiblityCheck(loanApproval);
-       String loannum=eligiblityCheck.loanEligiblity(12);
+       String loannum=eligiblityCheck.loanEligiblity(24);
         Assertions.assertNotNull(loannum);
     }
 }

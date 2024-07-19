@@ -1,6 +1,4 @@
-package com.neoteric.java.Service;
-
-import com.neoteric.java.model.LoanApplication;
+package com.neoteric.java.loan.model.service;
 
 import java.util.UUID;
 
@@ -10,8 +8,7 @@ public class EligiblityCheck {
         this.loanApproval=loanApproval;
     }
   public String loanEligiblity(int months){
-      //System.out.println(loanApproval.loanAmount);
-     double partOfSaving=0.6*loanApproval.amount;
+     double partOfSaving=0.6*loanApproval.savings;
        double amountPerMon=loanApproval.loanAmount/months;
         if(partOfSaving>=amountPerMon){
             System.out.println("eliglible");
