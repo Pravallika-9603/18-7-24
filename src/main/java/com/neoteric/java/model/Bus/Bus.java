@@ -1,5 +1,7 @@
 package com.neoteric.java.model.Bus;
 
+import java.util.List;
+
 public class Bus {
     public String serviceNo;
     public  String type;
@@ -7,5 +9,5 @@ public class Bus {
     public int endtime;
     public String seatNo;
     public int speed=80;
-    public Ticket ticket;
+    public List<Ticket> ticket;
 }

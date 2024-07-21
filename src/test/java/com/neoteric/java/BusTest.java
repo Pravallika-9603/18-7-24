@@ -7,6 +7,7 @@ import com.neoteric.java.model.Bus.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BusTest {
@@ -38,19 +39,28 @@ public class BusTest {
         passangerDetails.bus=bus;
         passangerDetails.boardingPoint="Hyd";
         passangerDetails.droppingPoint="Vij";
+        passangerDetails.noOfSeats=2;
+        passangerDetails.arr=new int[passangerDetails.noOfSeats];
 
 
-        BookSeat bookSeat=new BookSeat(passangerDetails);
-        int cost= bookSeat.bookSeat(10,bus);
+        BookSeat bookSeat=new BookSeat(passangerDetails,bus);
+        int[] passengerInput={10,14};
+        int[] arr=new int[passangerDetails.noOfSeats];
+        for(int i=0;i<passangerDetails.noOfSeats;i++){
+            arr[i]=passengerInput[i];
+        }
+
+        int cost= bookSeat.bookSeat(arr);
 
         Assertions.assertNotNull(cost);
-        Assertions.assertEquals(340,cost);
+        Assertions.assertEquals(680,cost);
 
-        Ticket ticket=new Ticket();
+        List<Ticket> ticket=new ArrayList<>();
         PaymentMethod paymentMethod =new PaymentMethod(passangerDetails);
         ticket=paymentMethod.processingPayment(cost,"debitcard");
 
         Assertions.assertNotNull(ticket);
+        Assertions.assertEquals(passangerDetails.noOfSeats,ticket.size());
 
     }
 }

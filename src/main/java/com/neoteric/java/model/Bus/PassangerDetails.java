@@ -8,5 +8,7 @@ public class PassangerDetails {
     public String name;
     public String gmail;
     public String mode;
+    public int noOfSeats;
+    public int arr[];
     public Bus bus;
 }
