@@ -1,12 +1,12 @@
 package com.neoteric.java;
 
-import com.neoteric.java.loan.model.service.EligiblityCheck;
-import com.neoteric.java.loan.model.service.LoanApproval;
-import com.neoteric.java.loan.model.service.LoanApplicationService;
-import com.neoteric.java.loan.model.Address;
-import com.neoteric.java.loan.model.Customer;
-import com.neoteric.java.loan.model.LoanApplication;
-import com.neoteric.java.loan.model.Occupation;
+import com.neoteric.java.Service.loan.EligiblityCheck;
+import com.neoteric.java.Service.loan.LoanApproval;
+import com.neoteric.java.Service.loan.LoanApplicationService;
+import com.neoteric.java.model.loan.Address;
+import com.neoteric.java.model.loan.Customer;
+import com.neoteric.java.model.loan.LoanApplication;
+import com.neoteric.java.model.loan.Occupation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

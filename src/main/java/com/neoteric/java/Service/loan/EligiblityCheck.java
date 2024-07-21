@@ -1,4 +1,4 @@
-package com.neoteric.java.loan.model.service;
+package com.neoteric.java.Service.loan;
 
 import java.util.UUID;
 

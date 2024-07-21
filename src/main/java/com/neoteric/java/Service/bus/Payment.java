@@ -1,15 +1,12 @@
-package com.neoteric.java.Service;
+package com.neoteric.java.Service.bus;
 
-import com.neoteric.java.model.PassangerDetails;
-import com.neoteric.java.model.RouteClass;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.neoteric.java.model.Bus.Bus;
+import com.neoteric.java.model.Bus.PassangerDetails;
 
 public class Payment {
-    public int paymentProcessing(PassangerDetails passangerDetails,RouteClass routeClass){
+    public int paymentProcessing(PassangerDetails passangerDetails, Bus bus){
 
-        int cost=passangerDetails.bus.speed*(routeClass.endtime- routeClass.starttime)*10;
+        int cost=passangerDetails.bus.speed*(bus.endtime- bus.starttime);
         int amount[]=new int[8];
 
 

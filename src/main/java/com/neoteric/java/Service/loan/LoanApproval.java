@@ -1,6 +1,6 @@
-package com.neoteric.java.loan.model.service;
+package com.neoteric.java.Service.loan;
 
-import com.neoteric.java.loan.model.LoanApplication;
+import com.neoteric.java.model.loan.LoanApplication;
 
 public class LoanApproval {
    public int loanAmount;

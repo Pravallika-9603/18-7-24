@@ -1,4 +1,4 @@
-package com.neoteric.java.model;
+package com.neoteric.java.model.Bus;
 import java.util.Date;
 
 public class Ticket {

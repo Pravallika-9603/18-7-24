@@ -1,10 +1,10 @@
-package com.neoteric.java.model;
-
-import java.util.List;
+package com.neoteric.java.model.Bus;
 
 public class Bus {
     public String serviceNo;
-    public List<String> type;
+    public  String type;
+    public int starttime;
+    public int endtime;
     public String seatNo;
     public int speed=80;
     public Ticket ticket;

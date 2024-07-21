@@ -1,4 +1,4 @@
-package com.neoteric.java.loan.model;
+package com.neoteric.java.model.loan;
 
 public class Occupation {
     public String role;

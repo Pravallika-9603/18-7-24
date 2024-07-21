@@ -1,8 +1,6 @@
-package com.neoteric.java.model;
+package com.neoteric.java.model.Bus;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class RouteClass {
     public String fromLoc;
