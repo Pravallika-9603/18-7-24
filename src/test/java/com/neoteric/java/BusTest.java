@@ -39,12 +39,12 @@ public class BusTest {
         passangerDetails.bus=bus;
         passangerDetails.boardingPoint="Hyd";
         passangerDetails.droppingPoint="Vij";
-        passangerDetails.noOfSeats=2;
+        passangerDetails.noOfSeats=5;
         passangerDetails.arr=new int[passangerDetails.noOfSeats];
 
 
         BookSeat bookSeat=new BookSeat(passangerDetails,bus);
-        int[] passengerInput={10,14};
+        int[] passengerInput={10,14,15,15,15};
         int[] arr=new int[passangerDetails.noOfSeats];
         for(int i=0;i<passangerDetails.noOfSeats;i++){
             arr[i]=passengerInput[i];
